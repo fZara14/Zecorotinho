@@ -44,61 +44,56 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-xl-10 ftco-animate">
-					<form method="post" action="#" class="billing-form">
+					<form action="./includes/controller.php" method="post" class="billing-form">
 						<h3 class="mb-4 billing-heading">Informações do Usuario</h3>
 						<div class="row align-items-end">
 							<div class="col-md-4">
 								<div class="form-group">
-									<label for="firstname">Primeiro Nome</label>
-									<input type="text" class="form-control" placeholder="">
+									<label for="nome">Primeiro Nome</label>
+									<input type="text" name="nome" class="form-control" placeholder="">
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group">
-									<label for="lastname">Sobrenome</label>
-									<input type="text" class="form-control" placeholder="">
+									<label for="sobrenome">Sobrenome</label>
+									<input type="text" name="sobrenome" class="form-control" placeholder="">
 								</div>
-                            </div>
-                            <div class="col-md-4">
+							</div>
+							<div class="col-md-4">
 								<div class="form-group">
-									<label for="lastname">Email</label>
-									<input type="text" class="form-control" placeholder="">
+									<label for="email">Email</label>
+									<input type="text" name="email" class="form-control" placeholder="">
 								</div>
 							</div>
 							<div class="w-100"></div>
 							<div class="col-md-4">
 								<div class="form-group">
-									<label for="lastname">CPF</label>
-									<input type="text" class="form-control" placeholder="">
+									<label for="cpf">CPF</label>
+									<input type="text" name="cpf" class="form-control" placeholder="">
 								</div>
 							</div>
-                            <div class="col-md-4">
+							<div class="col-md-4">
 								<div class="form-group">
-									<label for="lastname">Senha:</label>
-									<input type="text" class="form-control" placeholder="">
-								</div>
-                            </div>
-                            <div class="col-md-4">
-								<div class="form-group">
-									<label for="lastname">Confirmar Senha</label>
-									<input type="text" class="form-control" placeholder="">
+									<label for="senha">Senha:</label>
+									<input type="text" name="senha" class="form-control" placeholder="">
 								</div>
 							</div>
-						
-                    </form><!-- END -->
-                    <br>
-                    <div class="w-100"></div>
-                        <br>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="senha">Confirmar Senha</label>
+									<input type="text" name="senha" class="form-control" placeholder="">
+								</div>
+							</div>
+							<br>
+							<div class="w-100"></div>
+							<br>
 
-                    <div class="text-center">
-                                            <input style="margin-left: 420px;" type="submit" class="btn btn-primary py-3 px-4" value="Cadastrar">   
-                                        </div>
-						
-								
-								
-							
-							
-						
+							<div class="text-center">
+								<input style="margin-left: 420px;" name="register" type="submit" class="btn btn-primary py-3 px-4 mx-auto d-pad" value="Cadastrar">
+								<input style="margin-left: 420px;" name="update" type="submit" class="btn btn-primary py-3 px-4 mx-auto d-pad" value="Atualizar">
+								<input style="margin-left: 420px;" name="delete" type="submit" class="btn btn-primary py-3 px-4 mx-auto d-pad" value="Deletar">
+							</div>
+					</form><!-- END -->
 					
 				</div> <!-- .col-md-8 -->
 			</div>
