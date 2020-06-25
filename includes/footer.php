@@ -39,7 +39,7 @@
                     <h2 class="ftco-heading-2">Dúvidas?</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="icon fa fa-map marker"></span><span class="text">R. Olávo Capuzo, 280 - Taboão, São Roque - SP, 18135-139, Brasil</span></li>
+                            <li><span class="icon fa fa-map marker"></span><span class="text">Rua da Pedra, 90 - Estrada do Velho Barreiro, Pirassununga - SP, 18135-139, Brasil</span></li>
                             <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+55 (11) 95151-5151</span></a></li>
                             <li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span class="text">contato@zecorotinho.com</span></a></li>
                         </ul>
