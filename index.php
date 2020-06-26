@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Liquor Store - Free Bootstrap 4 Template by Colorlib</title>
+	<title>ZeCorotinho</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -131,7 +131,6 @@
 			<div class="row justify-content-center pb-5">
 				<div class="col-md-7 heading-section text-center ftco-animate">
 					<span class="subheading">Nossas ofertas</span>
-					<h2>Deliciosamente seu</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -141,7 +140,6 @@
 							<div class="desc">
 								<p class="meta-prod d-flex">
 									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
-									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
 									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
 								</p>
 							</div>
@@ -160,7 +158,6 @@
 							<div class="desc">
 								<p class="meta-prod d-flex">
 									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
-									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
 									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
 								</p>
 							</div>
@@ -179,7 +176,6 @@
 							<div class="desc">
 								<p class="meta-prod d-flex">
 									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
-									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
 									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
 								</p>
 							</div>
@@ -198,7 +194,6 @@
 							<div class="desc">
 								<p class="meta-prod d-flex">
 									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
-									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
 									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
 								</p>
 							</div>
@@ -217,7 +212,6 @@
 							<div class="desc">
 								<p class="meta-prod d-flex">
 									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
-									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
 									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
 								</p>
 							</div>
@@ -235,7 +229,6 @@
 							<div class="desc">
 								<p class="meta-prod d-flex">
 									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
-									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
 									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
 								</p>
 							</div>
@@ -253,7 +246,6 @@
 							<div class="desc">
 								<p class="meta-prod d-flex">
 									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
-									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
 									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
 								</p>
 							</div>
@@ -271,7 +263,6 @@
 							<div class="desc">
 								<p class="meta-prod d-flex">
 									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
-									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
 									<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
 								</p>
 							</div>

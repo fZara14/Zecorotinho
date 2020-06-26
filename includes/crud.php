@@ -35,7 +35,6 @@ function updateData($data)
     senha ='$senha'
     WHERE email = '{$data['email']}'";
 
-
     $conn->query($sql);
 }
 
@@ -46,4 +45,46 @@ function deleteData($data)
     $sql = "DELETE FROM clientes WHERE email ='{$data['email']}'";
 
     $conn->query($sql);
+}
+
+function readComments()
+{
+    $conn = include_once(__DIR__ . '/connection.php');
+    $sql = 'SELECT * FROM comentarios';
+    $result = $conn->query($sql);
+    return $result->fetch_all(MYSQLI_ASSOC);
+}
+
+function insertComment($data)
+{
+    $conn = include_once(__DIR__ . '/connection.php');
+
+    $sql = "INSERT INTO comentarios (comentario) VALUES ('$data')";
+
+    $conn->query($sql);
+}
+
+function deleteComment($data)
+{
+    $conn = include_once(__DIR__ . '/connection.php');
+
+    $sql = "DELETE FROM comentarios WHERE idComentario = ('$data')";
+
+    $conn->query($sql);
+}
+
+function readProducts()
+{
+    $conn = include_once(__DIR__ . '/connection.php');
+    $sql = "SELECT * FROM produtos";
+    $result = $conn->query($sql);
+    return $result->fetch_all(MYSQLI_ASSOC);
+}
+
+function displayProduct($id)
+{
+    $conn = include_once(__DIR__ . '/connection.php');
+    $sql = "SELECT * FROM produtos WHERE idProduto = ('$id')";
+    $result = $conn->query($sql);
+    return $result->fetch_all(MYSQLI_ASSOC);
 }
