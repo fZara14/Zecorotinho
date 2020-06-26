@@ -12,7 +12,7 @@ function insertData($data)
 {
     $conn = include_once(__DIR__ . '/connection.php');
     $campos = implode(",", array_keys($data));
-    $valores = implode("','", $data);
+    
 
     $nome = $data['nome'];
     $sobre = $data['sobrenome'];
@@ -54,3 +54,27 @@ function deleteData($data)
 
     $conn->query($sql);
 }
+
+ function loginUser ($data)
+ {   $conn = include_once(__DIR__ . '/connection.php');
+    $sql = "SELECT * FROM clientes WHERE email = '{$data['email']}'";
+    $result = $conn->query($sql);
+    $resultado = $result->fetch_array(MYSQLI_ASSOC);
+    $senha = $data['pass'];
+    $verificar = $resultado['senha'];
+    var_dump(password_verify($senha , $verificar));
+    if (password_verify($senha , $verificar)) {
+        echo"<script language='javascript' type='text/javascript'>
+        alert('Logado com Sucesso');window.location
+        .href='../addProduct.php';</script>";
+        die();
+    }else {
+        echo"<script language='javascript' type='text/javascript'>
+        alert('Login e/ou senha incorretos');window.location
+        .href='../login.php';</script>";
+        die();
+    }
+
+
+ }
+ 
