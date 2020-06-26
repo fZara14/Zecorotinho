@@ -44,13 +44,13 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-10 ftco-animate">
-                    <form method="post" action="#" class="billing-form">
+                    <form method="post" action="./includes/loginController.php" class="billing-form">
                         <h3 style="text-align: center;" class="mb-4 billing-heading">Login de Usuario</h3>
                         <div class="row justify-content-center">
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="firstname">Email</label>
-                                    <input type="text" class="form-control" placeholder="">
+                                    <input name="email" type="text" class="form-control" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -58,12 +58,12 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="lastname">Senha</label>
-                                    <input type="text" class="form-control" placeholder="">
+                                    <input name="pass" type="text" class="form-control" placeholder="">
                                 </div>
                             </div>
                         </div>
 
-                    </form>
+                    
                     <div class="row justify-content-center">
                         <a style="float: right;" href="#">Esqueci minha senha</a>
                     </div>
@@ -71,11 +71,11 @@
                         <a style="float: right;" href="register.php">Ainda não tem Cadastro?</a>
                     </div>
                     <br>
-                    <div class="w-100"></div>
+                    
                     <br>
 
                     <div class="text-center">
-                        <input type="submit" class="btn btn-primary py-3 px-4" value="Entrar">
+                    <input style="margin-left: 420px;" name="login" type="submit" class="btn btn-primary py-3 px-4 mx-auto d-pad" value="Entrar">
                     </div>
 
 
@@ -83,7 +83,7 @@
 
 
 
-
+                    </form>
                 </div> 
             </div>
         </div>
