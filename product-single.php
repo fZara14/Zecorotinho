@@ -51,9 +51,7 @@
 							<div class="row p-4">
 								<div class="col-md-12">
 									<form action='./includes/controller.php' method='post'>
-										<?php
-										include_once(__DIR__ . '/includes/comments.php');
-										?>
+										
 									</form>
 								</div>
 								<!-- rating count -->
