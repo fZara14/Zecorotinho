@@ -114,6 +114,45 @@ function displayProduct($id)
         .href='../login.php';</script>";
         die();
     }
-
-
  }
+
+ function insertProduct($data)
+{
+    $conn = include_once(__DIR__ . '/connection.php');
+    $campos = implode(",", array_keys($data));
+    
+    $nomeProduto = $data['nomeProduto'];
+    $preco = $data['preco'];
+    $categoria = $data['categoria'];
+    $url = $data['url'];
+    $descricao = $data['descricao'];
+
+    $sql = "INSERT INTO produtos ($campos) VALUES ('$nomeProduto','$preco','$categoria','$url','$descricao')";
+
+    $conn->query($sql);
+}
+
+function updateProduct($data)
+{
+    $conn = include_once(__DIR__ . '/connection.php');
+    
+    extract($data);
+    $sql = "UPDATE produtos SET
+    nomeProduto = '$nomeProduto',
+    preco ='$preco',
+    descricao ='$descricao',
+    url ='$url',
+    categoria ='$categoria'
+    WHERE nomeProduto = '$nomeProduto'";
+
+    $conn->query($sql);
+}
+
+function deleteProduct($data)
+{
+    $conn = include_once(__DIR__ . '/connection.php');
+
+    $sql = "DELETE FROM produtos WHERE nomeProduto ='{$data['nomeProduto']}'";
+
+    $conn->query($sql);
+}

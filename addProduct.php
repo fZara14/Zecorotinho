@@ -49,27 +49,33 @@
 						<div class="row align-items-end">
 							<div class="col-md-4">
 								<div class="form-group">
-									<label for="nome">Nome do Produto</label>
-									<input type="text" name="nome" class="form-control" placeholder="">
+									<label for="nomeProduto">Nome do Produto</label>
+									<input type="text" name="nomeProduto" class="form-control" placeholder="Ex: Jack Daniels">
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group">
-									<label for="sobrenome">Preço</label>
-									<input type="text" name="sobrenome" class="form-control" placeholder="">
+									<label for="preco">Preço</label>
+									<input type="text" name="preco" class="form-control" placeholder="130">
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group">
-									<label for="email">Categoria</label>
-									<input type="text" name="email" class="form-control" placeholder="">
+									<label for="categoria">Categoria</label>
+									<input type="text" name="categoria" class="form-control" placeholder="Whisky">
 								</div>
 							</div>
 							<div class="w-100"></div>
 							<div class="col-md-4">
 								<div class="form-group">
-									<label for="cpf">Link da Imagem</label>
-									<input type="text" name="cpf" class="form-control" placeholder="">
+									<label for="url">Link da Imagem</label>
+									<input type="text" name="url" class="form-control" placeholder="images/prod-10.jpg">
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="descricao">Descrição</label>
+									<input type="text" name="descricao" class="form-control" placeholder="">
 								</div>
 							</div>
 						
@@ -78,9 +84,9 @@
 							<br>
 
 							<div class="text-center">
-								<input style="margin-left: 420px;" name="register" type="submit" class="btn btn-primary py-3 px-4 mx-auto d-pad" value="Cadastrar">
-								<input style="margin-left: 420px;" name="update" type="submit" class="btn btn-primary py-3 px-4 mx-auto d-pad" value="Atualizar">
-								<input style="margin-left: 420px;" name="delete" type="submit" class="btn btn-primary py-3 px-4 mx-auto d-pad" value="Deletar">
+								<input style="margin-left: 420px;" name="insertProduct" type="submit" class="btn btn-primary py-3 px-4 mx-auto d-pad" value="Cadastrar">
+								<input style="margin-left: 420px;" name="updateProduct" type="submit" class="btn btn-primary py-3 px-4 mx-auto d-pad" value="Atualizar">
+								<input style="margin-left: 420px;" name="deleteProduct" type="submit" class="btn btn-primary py-3 px-4 mx-auto d-pad" value="Deletar">
 							</div>
 					</form><!-- END -->
 					

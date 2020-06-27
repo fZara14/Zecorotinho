@@ -1,8 +1,8 @@
 <?php
 
-$server     = '179.191.67.2:50264';
+$server     = 'localhost';
 $user       = 'root';
-$password   = 'root';
+$password   = '';
 $bd         = 'ZeCorotinho';
 
 $conn = new mysqli($server, $user, $password, $bd);

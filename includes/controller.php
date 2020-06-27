@@ -30,3 +30,21 @@ if (isset($_POST['excluirComentario'])) {
     deleteComment($_POST['excluirComentario']);
     header('location: ../product-single.php');
 }
+
+if (isset($_POST['insertProduct'])) {
+    unset($_POST['insertProduct']);
+    insertProduct ($_POST);
+    header('location: ../addProduct.php');
+}
+
+if (isset($_POST['updateProduct'])) {
+    unset($_POST['updateProduct']);
+    updateProduct ($_POST);
+    header('location: ../addProduct.php');
+}
+
+if (isset($_POST['deleteProduct'])) {
+    unset($_POST['deleteProduct']);
+    deleteProduct ($_POST);
+    header('location: ../addProduct.php');
+}
