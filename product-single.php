@@ -46,25 +46,7 @@
 				<?php
 				include_once(__DIR__ . '/includes/product-info.php');
 				?>
-			</div>
-			<div class="row mt-5">
-				<div class="col-md-12 nav-link-wrap">
-					<div class="nav nav-pills d-flex text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-						<a class="nav-link ftco-animate active mr-lg-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Descrição</a>
-						<a class="nav-link ftco-animate" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Avaliações</a>
 
-					</div>
-				</div>
-				<div class="col-md-12 tab-wrap">
-
-					<div class="tab-content bg-light" id="v-pills-tabContent">
-
-						<div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="day-1-tab">
-							<div class="p-4">
-								<h3 class="mb-4">Bacardi 151 Degree</h3>
-								<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
-							</div>
-						</div>
 						<div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-day-3-tab">
 							<div class="row p-4">
 								<div class="col-md-12">
