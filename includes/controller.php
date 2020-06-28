@@ -22,8 +22,9 @@ if (isset($_POST['delete'])) {
 
 if (isset($_POST['comentar'])) {
     unset($_POST['comentar']);
-    insertComment (htmlspecialchars($_POST['comentario']));
-    header('location: ../product-single.php');
+    $id = $_GET['id'];
+    insertComment (htmlspecialchars($_POST['comentario']), $id);
+    header("location: ../product-single.php?id={$id}");
 }
 
 if (isset($_POST['excluirComentario'])) {

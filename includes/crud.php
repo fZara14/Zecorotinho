@@ -13,19 +13,15 @@ function insertData($data)
     $conn = include_once(__DIR__ . '/connection.php');
     $campos = implode(",", array_keys($data));
     
-
     $nome = $data['nome'];
     $sobre = $data['sobrenome'];
     $email = $data['email'];
     $cpf = $data['cpf'];
     $senha = password_hash($data['senha'],PASSWORD_DEFAULT);
 
-
     $sql = "INSERT INTO clientes ($campos) VALUES ('$nome','$sobre','$email','$cpf','$senha')";
 
     $conn->query($sql);
-
-    //var_dump($sql);
 }
 
 function updateData($data)
@@ -54,32 +50,6 @@ function deleteData($data)
     $conn->query($sql);
 }
 
-/* function readComments()
-{
-    $conn = include_once(__DIR__ . '/connection.php');
-    $sql = 'SELECT * FROM comentarios';
-    $result = $conn->query($sql);
-    return $result->fetch_all(MYSQLI_ASSOC);
-} */
-
-function insertComment($data)
-{
-    $conn = include_once(__DIR__ . '/connection.php');
-
-    $sql = "INSERT INTO comentarios (comentario) VALUES ('$data')";
-
-    $conn->query($sql);
-}
-
-function deleteComment($data)
-{
-    $conn = include_once(__DIR__ . '/connection.php');
-
-    $sql = "DELETE FROM comentarios WHERE idComentario = ('$data')";
-
-    $conn->query($sql);
-}
-
 function readProducts()
 {
     $conn = include_once(__DIR__ . '/connection.php');
@@ -94,7 +64,40 @@ function displayProduct($id)
     $sql = "SELECT * FROM produtos WHERE idProduto = ('$id')";
     $result = $conn->query($sql);
     return $result->fetch_all(MYSQLI_ASSOC);
+
+    $t_id = $conn -> thread_id;
+
+$conn -> kill($t_id);
+
+$conn -> close();
 }
+
+function readComments()
+{
+    $conn = include_once(__DIR__ . '/connection.php');
+    $sql = 'SELECT * FROM comentarios';
+    $result = $conn->query($sql);
+    return $result->fetch_all(MYSQLI_ASSOC);
+}
+
+function insertComment($data, $id)
+{
+    $conn = include_once(__DIR__ . '/connection.php');
+
+    $sql = "INSERT INTO comentarios (comentario, idProduto) VALUES ('$data', $id)";
+
+    $conn->query($sql);
+}
+
+function deleteComment($data)
+{
+    $conn = include_once(__DIR__ . '/connection.php');
+
+    $sql = "DELETE FROM comentarios WHERE idComentario = ('$data')";
+
+    $conn->query($sql);
+}
+
  function loginUser ($data)
  {   $conn = include_once(__DIR__ . '/connection.php');
     $sql = "SELECT * FROM clientes WHERE email = '{$data['email']}'";

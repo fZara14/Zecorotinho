@@ -40,40 +40,27 @@
 		</div>
 	</section>
 
-	<section class="ftco-section">
-		<div class="container">
-			<div class="row">
-				<?php
-				include_once(__DIR__ . '/includes/product-info.php');
-				?>
+	<?php
+	include_once(__DIR__ . '/includes/product-info.php');
+	?>
 
-						<div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-day-3-tab">
-							<div class="row p-4">
-								<div class="col-md-12">
-									<form action='./includes/controller.php' method='post'>
-										
-									</form>
-								</div>
-								<!-- rating count -->
-							</div>
-							<form action="./includes/controller.php" method="post">
-								<div class="row p-4">
-									<div class="col-md-12">
-										<div class="form-group">
-											<label for="comentario">Deixe um comentário:</label>
-											<textarea class="form-control" name="comentario" rows="4"></textarea>
-											<div class="text-center mt-4">
-												<input name="comentar" type="submit" class="btn btn-primary py-3 px-4" value="Comentar">
-											</div>
-										</div>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
+
+	<div class="form-group">
+		<label for="comentario">Deixe um comentário:</label>
+		<textarea class="form-control" name="comentario" rows="4"></textarea>
+		<div class="text-center mt-4">
+			<input name="comentar" type="submit" class="btn btn-primary py-3 px-4" value="Comentar">
 		</div>
+	</div>
+	</form>
+
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
 	</section>
 
 	<?php

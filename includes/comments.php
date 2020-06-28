@@ -1,10 +1,7 @@
 <?php
 
-include_once(__DIR__ . '/crud.php');
-
 /* $registros = readComments();
 
-$html = '';
 foreach ($registros as $registro) {
     $html .= "<div class='review'>
         <div class='user-img' style='background-image: url(images/person_1.jpg)'></div>
@@ -19,6 +16,6 @@ foreach ($registros as $registro) {
                                             <button name='excluirComentario' type='submit' class='btn btn-primary' value='{$registro['idComentario']}'>Deletar</button>
                                         </div>
                                     
-    </div>";
-}
-echo $html; */
+    </div>
+        ";
+} */
