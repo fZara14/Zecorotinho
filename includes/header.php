@@ -81,5 +81,9 @@
                 <li class="nav-item"><a href="contact.php" class="nav-link">Contato</a></li>
             </ul>
         </div>
+        <form name="frmBusca" method="post" action="./includes/searchController.php" >
+    <input type="text" name="palavra" />
+    <input type="submit" name="searchProduct" value="Buscar" />
+</form>
     </div>
 </nav>

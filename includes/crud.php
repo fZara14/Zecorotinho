@@ -156,3 +156,44 @@ function deleteProduct($data)
 
     $conn->query($sql);
 }
+
+function search($data){
+    // Recuperamos a ação enviada pelo formulário
+$a = $_GET;
+// Verificamos se a ação é de busca
+if ($data['palavra']=="") {
+    echo"<script language='javascript' type='text/javascript'>
+    alert('Busca vazia');window.location
+    .href='../product.php';</script>";
+    die();
+}
+if (isset($data['palavra']) && !$data['palavra']=="") {
+
+    // Pegamos a palavra
+    $palavra = trim($_POST['palavra']);
+    // Verificamos no banco de dados produtos equivalente a palavra digitada
+    $conn = include_once(__DIR__ . '/connection.php');
+    $sql ="SELECT * FROM produtos WHERE nomeProduto LIKE '%".$palavra."%'";
+    $result = $conn->query($sql);
+    $resultado = $result->fetch_array(MYSQLI_ASSOC);
+    // Descobrimos o total de registros encontrados
+    
+    // Se houver pelo menos um registro, exibe-o
+    if (isset($resultado)) {
+        $idProduto = $resultado['idProduto'];
+        $id = (int)$idProduto;
+        echo"<script language='javascript' type='text/javascript'>
+        alert('Produto Encontrado');window.location
+        .href='../product-single.php?id=$id;</script>";
+        die();
+        }
+    // Se não houver registros
+     else {        
+        echo"<script language='javascript' type='text/javascript'>
+        alert('Produto não encontrado, consulte nossa pagina de produtos e encontre sua procura');window.location
+        .href='../product.php';</script>";
+        die();
+        
+    }
+}
+}
