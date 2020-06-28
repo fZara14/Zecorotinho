@@ -12,28 +12,24 @@ function insertData($data)
 {
     $conn = include_once(__DIR__ . '/connection.php');
     $campos = implode(",", array_keys($data));
-    
 
     $nome = $data['nome'];
     $sobre = $data['sobrenome'];
     $email = $data['email'];
     $cpf = $data['cpf'];
-    $senha = password_hash($data['senha'],PASSWORD_DEFAULT);
-
+    $senha = password_hash($data['senha'], PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO clientes ($campos) VALUES ('$nome','$sobre','$email','$cpf','$senha')";
 
     $conn->query($sql);
-
-    //var_dump($sql);
 }
 
 function updateData($data)
 {
     $conn = include_once(__DIR__ . '/connection.php');
-    
+
     extract($data);
-    $securePass = password_hash($senha,PASSWORD_DEFAULT);
+    $securePass = password_hash($senha, PASSWORD_DEFAULT);
     $sql = "UPDATE clientes SET
     nome = '$nome',
     sobrenome ='$sobrenome',
@@ -54,32 +50,6 @@ function deleteData($data)
     $conn->query($sql);
 }
 
-/* function readComments()
-{
-    $conn = include_once(__DIR__ . '/connection.php');
-    $sql = 'SELECT * FROM comentarios';
-    $result = $conn->query($sql);
-    return $result->fetch_all(MYSQLI_ASSOC);
-} */
-
-function insertComment($data)
-{
-    $conn = include_once(__DIR__ . '/connection.php');
-
-    $sql = "INSERT INTO comentarios (comentario) VALUES ('$data')";
-
-    $conn->query($sql);
-}
-
-function deleteComment($data)
-{
-    $conn = include_once(__DIR__ . '/connection.php');
-
-    $sql = "DELETE FROM comentarios WHERE idComentario = ('$data')";
-
-    $conn->query($sql);
-}
-
 function readProducts()
 {
     $conn = include_once(__DIR__ . '/connection.php');
@@ -95,32 +65,60 @@ function displayProduct($id)
     $result = $conn->query($sql);
     return $result->fetch_all(MYSQLI_ASSOC);
 }
- function loginUser ($data)
- {   $conn = include_once(__DIR__ . '/connection.php');
+
+function readComments()
+{
+    $conn = include_once(__DIR__ . '/connection.php');
+    $sql = 'SELECT * FROM comentarios';
+    $result = $conn->query($sql);
+    return $result->fetch_all(MYSQLI_ASSOC);
+}
+
+function insertComment($data, $id)
+{
+    $conn = include_once(__DIR__ . '/connection.php');
+
+    $sql = "INSERT INTO comentarios (comentario, idProduto) VALUES ('$data', $id)";
+
+    $conn->query($sql);
+}
+
+function deleteComment($data)
+{
+    $conn = include_once(__DIR__ . '/connection.php');
+
+    $sql = "DELETE FROM comentarios WHERE idComentario = ('$data')";
+
+    $conn->query($sql);
+}
+
+function loginUser($data)
+{
+    $conn = include_once(__DIR__ . '/connection.php');
     $sql = "SELECT * FROM clientes WHERE email = '{$data['email']}'";
     $result = $conn->query($sql);
     $resultado = $result->fetch_array(MYSQLI_ASSOC);
     $senha = $data['pass'];
     $verificar = $resultado['senha'];
-    var_dump(password_verify($senha , $verificar));
-    if (password_verify($senha , $verificar)) {
-        echo"<script language='javascript' type='text/javascript'>
+    var_dump(password_verify($senha, $verificar));
+    if (password_verify($senha, $verificar)) {
+        echo "<script language='javascript' type='text/javascript'>
         alert('Logado com Sucesso');window.location
         .href='../addProduct.php';</script>";
         die();
-    }else {
-        echo"<script language='javascript' type='text/javascript'>
+    } else {
+        echo "<script language='javascript' type='text/javascript'>
         alert('Login e/ou senha incorretos');window.location
         .href='../login.php';</script>";
         die();
     }
- }
+}
 
- function insertProduct($data)
+function insertProduct($data)
 {
     $conn = include_once(__DIR__ . '/connection.php');
     $campos = implode(",", array_keys($data));
-    
+
     $nomeProduto = $data['nomeProduto'];
     $preco = $data['preco'];
     $categoria = $data['categoria'];
@@ -135,7 +133,7 @@ function displayProduct($id)
 function updateProduct($data)
 {
     $conn = include_once(__DIR__ . '/connection.php');
-    
+
     extract($data);
     $sql = "UPDATE produtos SET
     nomeProduto = '$nomeProduto',
@@ -156,6 +154,7 @@ function deleteProduct($data)
 
     $conn->query($sql);
 }
+<<<<<<< HEAD
 
 function search($data){
     // Recuperamos a ação enviada pelo formulário
@@ -197,3 +196,5 @@ if (isset($data['palavra']) && !$data['palavra']=="") {
     }
 }
 }
+=======
+>>>>>>> e2fa710a981c03a078d74d84749d18151ba571a8
