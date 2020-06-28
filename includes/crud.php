@@ -12,12 +12,12 @@ function insertData($data)
 {
     $conn = include_once(__DIR__ . '/connection.php');
     $campos = implode(",", array_keys($data));
-    
+
     $nome = $data['nome'];
     $sobre = $data['sobrenome'];
     $email = $data['email'];
     $cpf = $data['cpf'];
-    $senha = password_hash($data['senha'],PASSWORD_DEFAULT);
+    $senha = password_hash($data['senha'], PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO clientes ($campos) VALUES ('$nome','$sobre','$email','$cpf','$senha')";
 
@@ -27,9 +27,9 @@ function insertData($data)
 function updateData($data)
 {
     $conn = include_once(__DIR__ . '/connection.php');
-    
+
     extract($data);
-    $securePass = password_hash($senha,PASSWORD_DEFAULT);
+    $securePass = password_hash($senha, PASSWORD_DEFAULT);
     $sql = "UPDATE clientes SET
     nome = '$nome',
     sobrenome ='$sobrenome',
@@ -64,12 +64,6 @@ function displayProduct($id)
     $sql = "SELECT * FROM produtos WHERE idProduto = ('$id')";
     $result = $conn->query($sql);
     return $result->fetch_all(MYSQLI_ASSOC);
-
-    $t_id = $conn -> thread_id;
-
-$conn -> kill($t_id);
-
-$conn -> close();
 }
 
 function readComments()
@@ -98,32 +92,33 @@ function deleteComment($data)
     $conn->query($sql);
 }
 
- function loginUser ($data)
- {   $conn = include_once(__DIR__ . '/connection.php');
+function loginUser($data)
+{
+    $conn = include_once(__DIR__ . '/connection.php');
     $sql = "SELECT * FROM clientes WHERE email = '{$data['email']}'";
     $result = $conn->query($sql);
     $resultado = $result->fetch_array(MYSQLI_ASSOC);
     $senha = $data['pass'];
     $verificar = $resultado['senha'];
-    var_dump(password_verify($senha , $verificar));
-    if (password_verify($senha , $verificar)) {
-        echo"<script language='javascript' type='text/javascript'>
+    var_dump(password_verify($senha, $verificar));
+    if (password_verify($senha, $verificar)) {
+        echo "<script language='javascript' type='text/javascript'>
         alert('Logado com Sucesso');window.location
         .href='../addProduct.php';</script>";
         die();
-    }else {
-        echo"<script language='javascript' type='text/javascript'>
+    } else {
+        echo "<script language='javascript' type='text/javascript'>
         alert('Login e/ou senha incorretos');window.location
         .href='../login.php';</script>";
         die();
     }
- }
+}
 
- function insertProduct($data)
+function insertProduct($data)
 {
     $conn = include_once(__DIR__ . '/connection.php');
     $campos = implode(",", array_keys($data));
-    
+
     $nomeProduto = $data['nomeProduto'];
     $preco = $data['preco'];
     $categoria = $data['categoria'];
@@ -138,7 +133,7 @@ function deleteComment($data)
 function updateProduct($data)
 {
     $conn = include_once(__DIR__ . '/connection.php');
-    
+
     extract($data);
     $sql = "UPDATE produtos SET
     nomeProduto = '$nomeProduto',
