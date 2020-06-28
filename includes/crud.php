@@ -154,7 +154,7 @@ function deleteProduct($data)
 
     $conn->query($sql);
 }
-<<<<<<< HEAD
+
 
 function search($data){
     // Recuperamos a ação enviada pelo formulário
@@ -196,5 +196,4 @@ if (isset($data['palavra']) && !$data['palavra']=="") {
     }
 }
 }
-=======
->>>>>>> e2fa710a981c03a078d74d84749d18151ba571a8
+
