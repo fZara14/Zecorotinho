@@ -28,8 +28,9 @@ if (isset($_POST['comentar'])) {
 }
 
 if (isset($_POST['excluirComentario'])) {
+    $id = $_GET['id'];
     deleteComment($_POST['excluirComentario']);
-    header('location: ../product-single.php');
+    header("location: ../product-single.php?id={$id}");
 }
 
 if (isset($_POST['insertProduct'])) {
