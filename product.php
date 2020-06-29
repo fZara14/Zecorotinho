@@ -45,22 +45,16 @@
 			<div class="row">
 				<div class="col-md-9">
 					<div class="row mb-4">
-						<div class="col-md-12 d-flex justify-content-between align-items-center">
-							<!-- <h4 class="product-select">Selecione o tipo</h4>
-							<select class="selectpicker" multiple>
-								<option>Brandy</option>
-								<option>Gin</option>
-								<option>Rum</option>
-								<option>Tequila</option>
-								<option>Vodka</option>
-								<option>Whiskey</option>
-							</select> -->
-						</div>
 					</div>
 					<div class="row">
 
 						<?php
-						include_once(__DIR__ . '/includes/products-list.php');
+						if ($_GET['categoria'] == 'todos') {
+							include_once(__DIR__ . '/includes/products-list.php');
+						} else {
+							$cat = $_GET['categoria'];
+							include_once(__DIR__ . '/includes/products-select.php');
+						}
 						?>
 
 					</div>

@@ -51,6 +51,14 @@ function readProducts()
     return $result->fetch_all(MYSQLI_ASSOC);
 }
 
+function selectProducts($cat)
+{
+    $conn = include_once(__DIR__ . '/connection.php');
+    $sql = "SELECT * FROM produtos WHERE categoria = ('$cat')";
+    $result = $conn->query($sql);
+    return $result->fetch_all(MYSQLI_ASSOC);
+}
+
 function displayProduct($id)
 {
     $conn = include(__DIR__ . '/connection.php');
