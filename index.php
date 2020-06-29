@@ -80,50 +80,61 @@
 		</div>
 	</section>
 
-
-
 	<section class="ftco-section ftco-no-pb">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-2 col-md-4 ">
-					<div class="sort w-100 text-center ftco-animate">
-						<div class="img" style="background-image: url(images/kind-1.jpg);"></div>
-						<h3>Brandy</h3>
+		<form action="./includes/controller.php" method="post">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 col-md-4 ">
+						<div class="sort w-100 text-center ftco-animate">
+						<button type="submit" name="btnVinho" value="vinho" class="btn">
+							<div class="img" style="background-image: url(images/kind-1.jpg);"></div>
+							</button>
+							<h3>Vinho</h3>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 ">
+						<div class="sort w-100 text-center ftco-animate">
+						<button type="submit" name="btnGin" value="gin" class="btn">
+							<div class="img" style="background-image: url(images/kind-2.jpg);"></div>
+							</button>
+							<h3>Gin</h3>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 ">
+						<div class="sort w-100 text-center ftco-animate">
+						<button type="submit" name="btnRum" value="rum" class="btn">
+							<div class="img" style="background-image: url(images/kind-3.jpg);"></div>
+							</button>
+							<h3>Rum</h3>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 ">
+						<div class="sort w-100 text-center ftco-animate">
+						<button type="submit" name="btnTequila" value="tequila" class="btn">
+							<div class="img" style="background-image: url(images/kind-4.jpg);"></div>
+							</button>
+							<h3>Tequila</h3>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 ">
+						<div class="sort w-100 text-center ftco-animate">
+						<button type="submit" name="btnVodka" value="vodka" class="btn">
+							<div class="img" style="background-image: url(images/kind-5.jpg);"></div>
+							</button>
+							<h3>Vodka</h3>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 ">
+						<div class="sort w-100 text-center ftco-animate">
+							<button type="submit" name="btnWhiskey" value="whiskey" class="btn">
+								<div class="img" style="background-image: url(images/kind-6.jpg);"></div>
+							</button>
+							<h3>Whiskey</h3>
+						</div>
 					</div>
 				</div>
-				<div class="col-lg-2 col-md-4 ">
-					<div class="sort w-100 text-center ftco-animate">
-						<div class="img" style="background-image: url(images/kind-2.jpg);"></div>
-						<h3>Gin</h3>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-4 ">
-					<div class="sort w-100 text-center ftco-animate">
-						<div class="img" style="background-image: url(images/kind-3.jpg);"></div>
-						<h3>Rum</h3>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-4 ">
-					<div class="sort w-100 text-center ftco-animate">
-						<div class="img" style="background-image: url(images/kind-4.jpg);"></div>
-						<h3>Tequila</h3>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-4 ">
-					<div class="sort w-100 text-center ftco-animate">
-						<div class="img" style="background-image: url(images/kind-5.jpg);"></div>
-						<h3>Vodka</h3>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-4 ">
-					<div class="sort w-100 text-center ftco-animate">
-						<div class="img" style="background-image: url(images/kind-6.jpg);"></div>
-						<h3>Whiskey</h3>
-					</div>
-				</div>
-
 			</div>
-		</div>
+		</form>
 	</section>
 
 	<section class="ftco-section">
@@ -142,7 +153,7 @@
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-md-4">
-					<a href="product.php" class="btn btn-primary d-block">Ver todos os produtos <span class="fa fa-long-arrow-right"></span></a>
+					<a href="product.php?categoria=todos" class="btn btn-primary d-block">Ver todos os produtos <span class="fa fa-long-arrow-right"></span></a>
 				</div>
 			</div>
 		</div>

@@ -28,8 +28,9 @@ if (isset($_POST['comentar'])) {
 }
 
 if (isset($_POST['excluirComentario'])) {
+    $id = $_GET['id'];
     deleteComment($_POST['excluirComentario']);
-    header('location: ../product-single.php');
+    header("location: ../product-single.php?id={$id}");
 }
 
 if (isset($_POST['insertProduct'])) {
@@ -48,4 +49,34 @@ if (isset($_POST['deleteProduct'])) {
     unset($_POST['deleteProduct']);
     deleteProduct ($_POST);
     header('location: ../addProduct.php');
+}
+
+if (isset($_POST['btnVinho'])) {
+    unset($_POST['btnVinho']);
+    header("location: ../product.php?categoria=vinho");
+}
+
+if (isset($_POST['btnGin'])) {
+    unset($_POST['btnGin']);
+    header("location: ../product.php?categoria=gin");
+}
+
+if (isset($_POST['btnRum'])) {
+    unset($_POST['btnRum']);
+    header("location: ../product.php?categoria=rum");
+}
+
+if (isset($_POST['btnTequila'])) {
+    unset($_POST['btnTequila']);
+    header("location: ../product.php?categoria=tequila");
+}
+
+if (isset($_POST['btnVodka'])) {
+    unset($_POST['btnVodka']);
+    header("location: ../product.php?categoria=vodka");
+}
+
+if (isset($_POST['btnWhiskey'])) {
+    unset($_POST['btnWhiskey']);
+    header("location: ../product.php?categoria=whiskey");
 }

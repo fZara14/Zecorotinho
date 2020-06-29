@@ -12,22 +12,18 @@ function insertData($data)
 {
     $conn = include_once(__DIR__ . '/connection.php');
     $campos = implode(",", array_keys($data));
-
     $nome = $data['nome'];
     $sobre = $data['sobrenome'];
     $email = $data['email'];
     $cpf = $data['cpf'];
     $senha = password_hash($data['senha'], PASSWORD_DEFAULT);
-
     $sql = "INSERT INTO clientes ($campos) VALUES ('$nome','$sobre','$email','$cpf','$senha')";
-
     $conn->query($sql);
 }
 
 function updateData($data)
 {
     $conn = include_once(__DIR__ . '/connection.php');
-
     extract($data);
     $securePass = password_hash($senha, PASSWORD_DEFAULT);
     $sql = "UPDATE clientes SET
@@ -37,16 +33,13 @@ function updateData($data)
     cpf ='$cpf',
     senha ='$securePass'
     WHERE email = '{$data['email']}'";
-
     $conn->query($sql);
 }
 
 function deleteData($data)
 {
     $conn = include_once(__DIR__ . '/connection.php');
-
     $sql = "DELETE FROM clientes WHERE email ='{$data['email']}'";
-
     $conn->query($sql);
 }
 
@@ -58,18 +51,26 @@ function readProducts()
     return $result->fetch_all(MYSQLI_ASSOC);
 }
 
-function displayProduct($id)
+function selectProducts($cat)
 {
     $conn = include_once(__DIR__ . '/connection.php');
+    $sql = "SELECT * FROM produtos WHERE categoria = ('$cat')";
+    $result = $conn->query($sql);
+    return $result->fetch_all(MYSQLI_ASSOC);
+}
+
+function displayProduct($id)
+{
+    $conn = include(__DIR__ . '/connection.php');
     $sql = "SELECT * FROM produtos WHERE idProduto = ('$id')";
     $result = $conn->query($sql);
     return $result->fetch_all(MYSQLI_ASSOC);
 }
 
-function readComments()
+function readComments($id)
 {
-    $conn = include_once(__DIR__ . '/connection.php');
-    $sql = 'SELECT * FROM comentarios';
+    $conn = include(__DIR__ . '/connection.php');
+    $sql = "SELECT * FROM comentarios WHERE idProduto = ('$id')";
     $result = $conn->query($sql);
     return $result->fetch_all(MYSQLI_ASSOC);
 }
@@ -77,18 +78,14 @@ function readComments()
 function insertComment($data, $id)
 {
     $conn = include_once(__DIR__ . '/connection.php');
-
     $sql = "INSERT INTO comentarios (comentario, idProduto) VALUES ('$data', $id)";
-
     $conn->query($sql);
 }
 
 function deleteComment($data)
 {
     $conn = include_once(__DIR__ . '/connection.php');
-
     $sql = "DELETE FROM comentarios WHERE idComentario = ('$data')";
-
     $conn->query($sql);
 }
 
@@ -118,22 +115,18 @@ function insertProduct($data)
 {
     $conn = include_once(__DIR__ . '/connection.php');
     $campos = implode(",", array_keys($data));
-
     $nomeProduto = $data['nomeProduto'];
     $preco = $data['preco'];
     $categoria = $data['categoria'];
     $url = $data['url'];
     $descricao = $data['descricao'];
-
     $sql = "INSERT INTO produtos ($campos) VALUES ('$nomeProduto','$preco','$categoria','$url','$descricao')";
-
     $conn->query($sql);
 }
 
 function updateProduct($data)
 {
     $conn = include_once(__DIR__ . '/connection.php');
-
     extract($data);
     $sql = "UPDATE produtos SET
     nomeProduto = '$nomeProduto',
@@ -142,16 +135,13 @@ function updateProduct($data)
     url ='$url',
     categoria ='$categoria'
     WHERE nomeProduto = '$nomeProduto'";
-
     $conn->query($sql);
 }
 
 function deleteProduct($data)
 {
     $conn = include_once(__DIR__ . '/connection.php');
-
     $sql = "DELETE FROM produtos WHERE nomeProduto ='{$data['nomeProduto']}'";
-
     $conn->query($sql);
 }
 

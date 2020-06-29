@@ -4,7 +4,7 @@
             <div class="col-md-6 d-flex align-items-center">
                 <p class="mb-0 phone pl-md-2">
                     <a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a>
-                    <a href="#"><span class="fa fa-paper-plane mr-1"></span> youremail@email.com</a>
+                    <a href="#"><span class="fa fa-paper-plane mr-1"></span> zecorotinho@email.com</a>
                 </p>
             </div>
             <div class="col-md-6 d-flex justify-content-md-end">
@@ -71,7 +71,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produtos</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown04">
-                        <a class="dropdown-item" href="product.php">Produtos</a>
+                        <a class="dropdown-item" href="product.php?categoria=todos">Produtos</a>
                         <!-- <a class="dropdown-item" href="product-single.php">Produto Unico</a> -->
                         <a class="dropdown-item" href="cart.php">Carrinho</a>
                         <a class="dropdown-item" href="checkout.php">Finalizar compra</a>
