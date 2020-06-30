@@ -153,7 +153,7 @@ $a = $_GET;
 if ($data['palavra']=="") {
     echo"<script language='javascript' type='text/javascript'>
     alert('Busca vazia');window.location
-    .href='../product.php';</script>";
+    .href='../product.php?categoria=todos';</script>";
     die();
 }
 if (isset($data['palavra']) && !$data['palavra']=="") {
@@ -172,20 +172,16 @@ if (isset($data['palavra']) && !$data['palavra']=="") {
         $idProduto = $resultado['idProduto'];
         $id = (int)$idProduto;
         header("location: ../product-single.php?id=$id");
-}
-        // echo"<script language='javascript' type='text/javascript'>
-        // alert('Produto Encontrado');window.location
-        // .href='../product-single.php?id='{$id}';</script>";
-        // die();
-        }
+    }        
     // Se não houver registros
      else {        
         echo"<script language='javascript' type='text/javascript'>
         alert('Produto não encontrado, consulte nossa pagina de produtos e encontre sua procura');window.location
-        .href='../product.php';</script>";
+        .href='../product.php?categoria=todos';</script>";
         die();
         
     }
+}
 }
 
 
