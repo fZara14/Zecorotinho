@@ -50,38 +50,38 @@
 							<div class="col-md-4">
 								<div class="form-group">
 									<label for="nome">Primeiro Nome</label>
-									<input type="text" name="nome" class="form-control" placeholder="">
+									<input type="text" name="nome" class="form-control" placeholder="Coloque seu nome" required />
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group">
 									<label for="sobrenome">Sobrenome</label>
-									<input type="text" name="sobrenome" class="form-control" placeholder="">
+									<input type="text" name="sobrenome" class="form-control" placeholder="Coloque seu sobrenome" required />
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group">
 									<label for="email">Email</label>
-									<input type="text" name="email" class="form-control" placeholder="">
+									<input type="email" name="email" class="form-control" placeholder="Coloque seu email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required />
 								</div>
 							</div>
 							<div class="w-100"></div>
 							<div class="col-md-4">
 								<div class="form-group">
 									<label for="cpf">CPF</label>
-									<input type="text" name="cpf" class="form-control" placeholder="">
+									<input type="text" name="cpf" class="form-control" placeholder="" pattern="[0-9]+$" maxlength="11" title="O campo cpf não pode conter letras" data-only-number="true" required>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group">
 									<label for="senha">Senha:</label>
-									<input type="text" name="senha" class="form-control" placeholder="">
+									<input type="password" name="senha" class="form-control" placeholder="" required>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group">
 									<label for="senha">Confirmar Senha</label>
-									<input type="text" name="senha" class="form-control" placeholder="">
+									<input type="password" name="senha" class="form-control" placeholder="" required>
 								</div>
 							</div>
 							<br>

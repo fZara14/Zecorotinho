@@ -171,10 +171,12 @@ if (isset($data['palavra']) && !$data['palavra']=="") {
     if (isset($resultado)) {
         $idProduto = $resultado['idProduto'];
         $id = (int)$idProduto;
-        echo"<script language='javascript' type='text/javascript'>
-        alert('Produto Encontrado');window.location
-        .href='../product-single.php?id=$id;</script>";
-        die();
+        header("location: ../product-single.php?id=$id");
+}
+        // echo"<script language='javascript' type='text/javascript'>
+        // alert('Produto Encontrado');window.location
+        // .href='../product-single.php?id='{$id}';</script>";
+        // die();
         }
     // Se não houver registros
      else {        
@@ -185,5 +187,5 @@ if (isset($data['palavra']) && !$data['palavra']=="") {
         
     }
 }
-}
+
 

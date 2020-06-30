@@ -50,7 +50,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="firstname">Email</label>
-                                    <input name="email" type="text" class="form-control" placeholder="">
+                                    <input name="email" type="email" class="form-control" placeholder="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="lastname">Senha</label>
-                                    <input name="pass" type="text" class="form-control" placeholder="">
+                                    <input name="pass" type="password" class="form-control" placeholder="" required/>
                                 </div>
                             </div>
                         </div>
