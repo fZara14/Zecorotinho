@@ -65,12 +65,12 @@
 						<div class="categories">
 							<h3>Product Types</h3>
 							<ul class="p-0">
-								<li><a href="#">Brandy <span class="fa fa-chevron-right"></span></a></li>
-								<li><a href="#">Gin <span class="fa fa-chevron-right"></span></a></li>
-								<li><a href="#">Rum <span class="fa fa-chevron-right"></span></a></li>
-								<li><a href="#">Tequila <span class="fa fa-chevron-right"></span></a></li>
-								<li><a href="#">Vodka <span class="fa fa-chevron-right"></span></a></li>
-								<li><a href="#">Whiskey <span class="fa fa-chevron-right"></span></a></li>
+								<li><a href="product.php?categoria=vinho">Vinho <span class="fa fa-chevron-right"></span></a></li>
+								<li><a href="product.php?categoria=Gin">Gin <span class="fa fa-chevron-right"></span></a></li>
+								<li><a href="product.php?categoria=Rum">Rum <span class="fa fa-chevron-right"></span></a></li>
+								<li><a href="product.php?categoria=Tequila">Tequila <span class="fa fa-chevron-right"></span></a></li>
+								<li><a href="product.php?categoria=Vodka">Vodka <span class="fa fa-chevron-right"></span></a></li>
+								<li><a href="product.php?categoria=Whiskey">Whiskey <span class="fa fa-chevron-right"></span></a></li>
 							</ul>
 						</div>
 					</div>
