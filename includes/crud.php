@@ -189,3 +189,19 @@ if (isset($data['palavra']) && !$data['palavra']=="") {
     }
 }
 }
+
+function readCart()
+{
+    $conn = include(__DIR__ . '/connection.php');
+    $sql = "SELECT * FROM carrinho";
+    $result = $conn->query($sql);
+    return $result->fetch_all(MYSQLI_ASSOC);
+}
+
+function insertCart()
+{
+    $conn = include_once(__DIR__ . '/connection.php');
+    $sql = "INSERT INTO carrinho (nomeProduto, preco, descricao, url, idCliente, idProduto) VALUES ('nome', '122', 'desc', 'url', 2, 4)";
+    var_dump($sql);
+    //$conn->query($sql);
+}

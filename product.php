@@ -67,7 +67,7 @@ session_start();
 				<div class="col-md-3">
 					<div class="sidebar-box ftco-animate">
 						<div class="categories">
-							<h3>Product Types</h3>
+							<h3>Tipos de produtos</h3>
 							<ul class="p-0">
 								<li><a href="product.php?categoria=vinho">Vinho <span class="fa fa-chevron-right"></span></a></li>
 								<li><a href="product.php?categoria=Gin">Gin <span class="fa fa-chevron-right"></span></a></li>

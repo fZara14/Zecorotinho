@@ -33,7 +33,9 @@ $html = "
         </div>
         <div class='w-100'></div>
     </div>
-    <p><a href='cart.php' class='btn btn-primary py-3 px-5 mr-2'>Adicionar ao carrinho</a><a href='checkout.php' class='btn btn-primary py-3 px-5'>Comprar</a></p>
+    <form action='./includes/controller.php' method='post'>
+    <input name='addToCart' type='submit' class='btn btn-primary py-3 px-5 mr-2' value='Adicionar ao carrinho'>
+    </form>
 </div>
 </div>
 			<div class='row mt-5'>

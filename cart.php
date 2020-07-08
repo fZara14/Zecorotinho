@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+session_start();
+?>
 <html lang="en">
 
 <head>
@@ -51,161 +54,15 @@
 								<th>&nbsp;</th>
 								<th>Produto</th>
 								<th>Preço</th>
-								<th>Quantidade</th>
-								<th>Total</th>
 								<th>&nbsp;</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr class="alert" role="alert">
-								<td>
-									<label class="checkbox-wrap checkbox-primary">
-										<input type="checkbox" checked>
-										<span class="checkmark"></span>
-									</label>
-								</td>
-								<td>
-									<div class="img" style="background-image: url(images/prod-1.jpg);"></div>
-								</td>
-								<td>
-									<div class="email">
-										<span>Jim Beam Kentucky Straight</span>
-										<span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-									</div>
-								</td>
-								<td>$44.99</td>
-								<td class="quantity">
-									<div class="input-group">
-										<input type="text" name="quantity" class="quantity form-control input-number" value="2" min="1" max="100">
-									</div>
-								</td>
-								<td>$89.98</td>
-								<td>
-									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-										<span aria-hidden="true"><i class="fa fa-close"></i></span>
-									</button>
-								</td>
-							</tr>
 
-							<tr class="alert" role="alert">
-								<td>
-									<label class="checkbox-wrap checkbox-primary">
-										<input type="checkbox">
-										<span class="checkmark"></span>
-									</label>
-								</td>
-								<td>
-									<div class="img" style="background-image: url(images/prod-2.jpg);"></div>
-								</td>
-								<td>
-									<div class="email">
-										<span>Jim Beam Kentucky Straight</span>
-										<span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-									</div>
-								</td>
-								<td>$30.99</td>
-								<td class="quantity">
-									<div class="input-group">
-										<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-									</div>
-								</td>
-								<td>$30.99</td>
-								<td>
-									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-										<span aria-hidden="true"><i class="fa fa-close"></i></span>
-									</button>
-								</td>
-							</tr>
+							<?php
+							include_once(__DIR__ . '/includes/cart-item.php');
+							?>
 
-							<tr class="alert" role="alert">
-								<td>
-									<label class="checkbox-wrap checkbox-primary">
-										<input type="checkbox">
-										<span class="checkmark"></span>
-									</label>
-								</td>
-								<td>
-									<div class="img" style="background-image: url(images/prod-3.jpg);"></div>
-								</td>
-								<td>
-									<div class="email">
-										<span>Jim Beam Kentucky Straight</span>
-										<span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-									</div>
-								</td>
-								<td>$35.50</td>
-								<td class="quantity">
-									<div class="input-group">
-										<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-									</div>
-								</td>
-								<td>$35.50</td>
-								<td>
-									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-										<span aria-hidden="true"><i class="fa fa-close"></i></span>
-									</button>
-								</td>
-							</tr>
-
-							<tr class="alert" role="alert">
-								<td>
-									<label class="checkbox-wrap checkbox-primary">
-										<input type="checkbox">
-										<span class="checkmark"></span>
-									</label>
-								</td>
-								<td>
-									<div class="img" style="background-image: url(images/prod-4.jpg);"></div>
-								</td>
-								<td>
-									<div class="email">
-										<span>Jim Beam Kentucky Straight</span>
-										<span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-									</div>
-								</td>
-								<td>$76.99</td>
-								<td class="quantity">
-									<div class="input-group">
-										<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-									</div>
-								</td>
-								<td>$76.99</td>
-								<td>
-									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-										<span aria-hidden="true"><i class="fa fa-close"></i></span>
-									</button>
-								</td>
-							</tr>
-
-							<tr class="alert" role="alert">
-								<td class="border-bottom-0">
-									<label class="checkbox-wrap checkbox-primary">
-										<input type="checkbox">
-										<span class="checkmark"></span>
-									</label>
-								</td>
-								<td class="border-bottom-0">
-									<div class="img" style="background-image: url(images/prod-5.jpg);"></div>
-								</td>
-								<td class="border-bottom-0">
-									<div class="email">
-										<span>Jim Beam Kentucky Straight</span>
-										<span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-									</div>
-								</td>
-								<td class="border-bottom-0">$40.00</td>
-								<td class="quantity border-bottom-0">
-									<div class="input-group">
-										<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-									</div>
-								</td>
-								<td class="border-bottom-0">$40.00</td>
-								<td class="border-bottom-0">
-									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-										<span aria-hidden="true"><i class="fa fa-close"></i></span>
-									</button>
-								</td>
-							</tr>
 						</tbody>
 					</table>
 				</div>
@@ -216,7 +73,7 @@
 						<h3>Total do carrinho</h3>
 						<p class="d-flex">
 							<span>Subtotal</span>
-							<span>$20.60</span>
+							<span>$00.00</span>
 						</p>
 						<p class="d-flex">
 							<span>Frete</span>
@@ -224,12 +81,12 @@
 						</p>
 						<p class="d-flex">
 							<span>Desconto</span>
-							<span>$3.00</span>
+							<span>$0.00</span>
 						</p>
 						<hr>
 						<p class="d-flex total-price">
 							<span>Total</span>
-							<span>$17.60</span>
+							<span><?php echo $total?></span>
 						</p>
 					</div>
 					<p class="text-center"><a href="checkout.php" class="btn btn-primary py-3 px-4">Finalizar compra</a></p>

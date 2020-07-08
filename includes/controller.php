@@ -80,3 +80,8 @@ if (isset($_POST['btnWhiskey'])) {
     unset($_POST['btnWhiskey']);
     header("location: ../product.php?categoria=whiskey");
 }
+
+if (isset($_POST['addToCart'])) {
+    insertCart();
+    //header("location: ../product.php?categoria=todos");
+}
