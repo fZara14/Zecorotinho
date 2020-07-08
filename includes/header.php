@@ -25,7 +25,7 @@
                     </p>
                 </div>
                 <div class="reg">
-                    <p class="mb-0"><a href="register.php" class="mr-2">Cadastrar</a> <a href="login.php">Login</a> <a href="/includes/logout.php">LogOut</a></p>
+                    <p class="mb-0"><a href="register.php" class="mr-2">Cadastrar</a> <a action="login.php">Login</a> <a href="/includes/logout.php">LogOut</a></p>
                 </div>
             </div>
         </div>
@@ -84,9 +84,12 @@
                         <a class="dropdown-item" href="cart.php">Carrinho</a>
                         <a class="dropdown-item" href="checkout.php">Finalizar compra</a>
                         <?php
-                        if ($_SESSION['permission'] === "1") {
+                        if (isset($_SESSION)) {
+                      if ($_SESSION['permission'] === "1") {
                             echo "<a class='dropdown-item' href='addProduct.php'>Adicionar Produto</a>";
-                    }
+                        } 
+                        }
+                   
                         ?>
                         
                     </div>

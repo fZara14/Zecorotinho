@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+include(__DIR__ . './includes/crud.php');
+session_start();
+if (!isset($_SESSION['login'])) {
+		header('location:login.php');
+}
+?>
 <html lang="en">
 
 <head>

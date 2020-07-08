@@ -189,16 +189,11 @@ if (isset($data['palavra']) && !$data['palavra']=="") {
     }
 }
 }
-function logout () {    
-
-    if(isset($_SESSION['login'])){
-        session_destroy();
-        header("Location:login.php");
+function logout()
+    {
+        unset($_SESSION['login']);
+        unset($_SESSION['permission']);
+        header("Location: ../login.php");
+        exit;
     }
-    else{
-        header("Location:index.php");
-    }
-
-
-}
 
