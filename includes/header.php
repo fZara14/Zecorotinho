@@ -1,10 +1,18 @@
+
+
 <div class="wrap">
     <div class="container">
         <div class="row">
             <div class="col-md-6 d-flex align-items-center">
                 <p class="mb-0 phone pl-md-2">
-                    <a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a>
-                    <a href="#"><span class="fa fa-paper-plane mr-1"></span> zecorotinho@email.com</a>
+                    <?php
+                   
+                    if (isset($_SESSION['login'])) {
+                       echo "<a href='#'><span class='fa fa-paper-plane mr-1'></span>" . $_SESSION['login'] ."</a>  ";
+                       echo "<a href='#'><span class='fa fa-paper-plane mr-1'></span>" . $_SESSION['nome'] ."</a>";
+                    }
+                    ?>
+                   
                 </p>
             </div>
             <div class="col-md-6 d-flex justify-content-md-end">
@@ -17,7 +25,7 @@
                     </p>
                 </div>
                 <div class="reg">
-                    <p class="mb-0"><a href="register.php" class="mr-2">Cadastrar</a> <a href="login.php">Login</a></p>
+                    <p class="mb-0"><a href="register.php" class="mr-2">Cadastrar</a> <a href="login.php">Login</a> <a href="/includes/logout.php">LogOut</a></p>
                 </div>
             </div>
         </div>
@@ -75,6 +83,12 @@
                         <!-- <a class="dropdown-item" href="product-single.php">Produto Unico</a> -->
                         <a class="dropdown-item" href="cart.php">Carrinho</a>
                         <a class="dropdown-item" href="checkout.php">Finalizar compra</a>
+                        <?php
+                        if ($_SESSION['permission'] === "1") {
+                            echo "<a class='dropdown-item' href='addProduct.php'>Adicionar Produto</a>";
+                    }
+                        ?>
+                        
                     </div>
                 </li>
                 <li class="nav-item"><a href="contact.php" class="nav-link">Contato</a></li>

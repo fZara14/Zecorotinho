@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+include(__DIR__ . './includes/crud.php');
+session_start();
+if ($_SESSION['permission'] === "0") {
+		header('location:product.php?categoria=todos');
+}
+?>
 <html lang="en">
 
 <head>

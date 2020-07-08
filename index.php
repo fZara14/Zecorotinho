@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+include(__DIR__ . './includes/crud.php');
+session_start();
+if (!isset($_SESSION['login'])) {
+		header('location:login.php');
+}
+?>
 <html lang="en">
 
 <head>
@@ -33,7 +40,7 @@
 				<div class="col-md-8 ftco-animate d-flex align-items-end">
 					<div class="text w-100 text-center">
 						<h1 class="mb-4">Boas <span>Bebidas</span> Para Bons <span>Momentos</span>.</h1>
-						<p><a href="product.php" class="btn btn-primary py-2 px-4">Comprar</a> <a href="about.php" class="btn btn-white btn-outline-white py-2 px-4">Leia mais</a></p>
+						<p><a href="product.php" class="btn btn-primary py-2 px-4">Comprar</a></p>
 					</div>
 				</div>
 			</div>

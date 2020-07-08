@@ -69,7 +69,7 @@
 							<div class="col-md-4">
 								<div class="form-group">
 									<label for="cpf">CPF</label>
-									<input type="text" name="cpf" class="form-control" placeholder="" pattern="[0-9]+$" maxlength="11" title="O campo cpf não pode conter letras" data-only-number="true" required>
+									<input type="text" name="cpf" class="form-control" placeholder="" pattern="[0-9]+$" maxlength="14" title="O campo cpf não pode conter letras" data-only-number="true" required>
 								</div>
 							</div>
 							<div class="col-md-4">

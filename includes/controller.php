@@ -5,7 +5,7 @@ include_once ('./crud.php');
 if (isset($_POST['register'])) {
     unset($_POST['register']);
     insertData ($_POST);
-    header('location: ../register.php');
+    header('location: ../login.php');
 }
 
 if (isset($_POST['update'])) {

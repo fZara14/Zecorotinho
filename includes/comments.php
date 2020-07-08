@@ -8,7 +8,7 @@ foreach ($registros as $registro) {
         <div class='user-img' style='background-image: url(images/person_{$img}.jpg)'></div>
 										<div class='desc'>
 											<h4>
-												<span class='text-left'>John Smith</span>
+												<span class='text-left'>". $_SESSION['nome'] ."</span>
 												<span class='text-right'>{$registro['data']}</span>
 											</h4>
 												<span class='text-right'><a href='#' class='reply'><i class='icon-reply'></i></a></span>

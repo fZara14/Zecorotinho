@@ -97,12 +97,18 @@ function loginUser($data)
     $resultado = $result->fetch_array(MYSQLI_ASSOC);
     $senha = $data['pass'];
     $verificar = $resultado['senha'];
-    var_dump(password_verify($senha, $verificar));
+   
     if (password_verify($senha, $verificar)) {
+        session_start();
+        $_SESSION['login'] = $_POST['email'];
+        $_SESSION['nome'] = $resultado['nome'];        
+        $_SESSION['permission'] = $resultado['permissionId'];
+        
         echo "<script language='javascript' type='text/javascript'>
         alert('Logado com Sucesso');window.location
         .href='../addProduct.php';</script>";
         die();
+        return $login;
     } else {
         echo "<script language='javascript' type='text/javascript'>
         alert('Login e/ou senha incorretos');window.location
@@ -183,5 +189,16 @@ if (isset($data['palavra']) && !$data['palavra']=="") {
     }
 }
 }
+function logout () {    
 
+    if(isset($_SESSION['login'])){
+        session_destroy();
+        header("Location:login.php");
+    }
+    else{
+        header("Location:index.php");
+    }
+
+
+}
 

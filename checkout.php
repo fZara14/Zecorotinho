@@ -1,8 +1,15 @@
 <!DOCTYPE html>
+<?php
+include(__DIR__ . './includes/crud.php');
+session_start();
+if (!isset($_SESSION['login'])) {
+		header('location:login.php');
+}
+?>
 <html lang="en">
 
 <head>
-	<title>Liquor Store - Free Bootstrap 4 Template by Colorlib</title>
+	<title>ZéCorotinho</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
