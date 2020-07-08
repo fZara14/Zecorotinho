@@ -83,5 +83,5 @@ if (isset($_POST['btnWhiskey'])) {
 
 if (isset($_POST['addToCart'])) {
     insertCart();
-    //header("location: ../product.php?categoria=todos");
+    header("location: ../product.php?categoria=todos");
 }

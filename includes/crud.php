@@ -103,6 +103,8 @@ function loginUser($data)
         $_SESSION['login'] = $_POST['email'];
         $_SESSION['nome'] = $resultado['nome'];        
         $_SESSION['permission'] = $resultado['permissionId'];
+        $_SESSION['idCliente'] = $resultado['idCliente'];
+
         
         echo "<script language='javascript' type='text/javascript'>
         alert('Logado com Sucesso');window.location
@@ -115,6 +117,7 @@ function loginUser($data)
         .href='../login.php';</script>";
         die();
     }
+
 }
 
 function insertProduct($data)
@@ -192,6 +195,9 @@ if (isset($data['palavra']) && !$data['palavra']=="") {
 
 function readCart()
 {
+    session_start();
+    $id = $_SESSION['idCliente'];
+    $idCliente = (int)$id;
     $conn = include(__DIR__ . '/connection.php');
     $sql = "SELECT * FROM carrinho";
     $result = $conn->query($sql);
@@ -200,8 +206,11 @@ function readCart()
 
 function insertCart()
 {
+    session_start();
     $conn = include_once(__DIR__ . '/connection.php');
-    $sql = "INSERT INTO carrinho (nomeProduto, preco, descricao, url, idCliente, idProduto) VALUES ('nome', '122', 'desc', 'url', 2, 4)";
+    $id = $_SESSION['idCliente'];
+    $idCliente = (int)$id;
+    $sql = "INSERT INTO carrinho (nomeProduto, preco, descricao, url, 'idCliente', idProduto) VALUES ('nome', '122', 'desc', 'url',$idCliente, 4)";
     var_dump($sql);
-    //$conn->query($sql);
+    $conn->query($sql);
 }
