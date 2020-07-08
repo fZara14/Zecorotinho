@@ -25,7 +25,7 @@
                     </p>
                 </div>
                 <div class="reg">
-                    <p class="mb-0"><a href="register.php" class="mr-2">Cadastrar</a> <a action="login.php">Login</a> <a href="/includes/logout.php">LogOut</a></p>
+                    <p class="mb-0"><a href="register.php" class="mr-2">Cadastrar</a> <a action="login.php">Login</a> <a href="./includes/logout.php">LogOut</a></p>
                 </div>
             </div>
         </div>
@@ -99,7 +99,7 @@
         </div>
         <form name="frmBusca" method="post" action="./includes/searchController.php" >
     <input type="text" name="palavra" />
-    <input type="submit" name="searchProduct" value="Buscar" />
+    <input type="submit" name="searchProduct" value="Buscar" class="btn btn-primary mb-1" />
 </form>
     </div>
 </nav>
