@@ -82,6 +82,14 @@ if (isset($_POST['btnWhiskey'])) {
 }
 
 if (isset($_POST['addToCart'])) {
-    insertCart();
+    $idProduto = $_GET['id'];
+    $productInfo = displayProduct($idProduto);
+    insertCart($idProduto, $productInfo);
     header("location: ../product.php?categoria=todos");
+}
+
+if (isset($_POST['deleteCartItem'])) {
+    $nomeProduto = $_GET['nome'];
+    deleteCart($nomeProduto);
+    header("location: ../cart.php");
 }

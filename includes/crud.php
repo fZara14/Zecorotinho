@@ -195,22 +195,29 @@ if (isset($data['palavra']) && !$data['palavra']=="") {
 
 function readCart()
 {
-    session_start();
     $id = $_SESSION['idCliente'];
     $idCliente = (int)$id;
     $conn = include(__DIR__ . '/connection.php');
-    $sql = "SELECT * FROM carrinho";
+    $sql = "SELECT * FROM carrinho WHERE idCliente = $idCliente";
     $result = $conn->query($sql);
     return $result->fetch_all(MYSQLI_ASSOC);
 }
 
-function insertCart()
-{
+function insertCart($idProduto, $productInfo)
+{  
     session_start();
-    $conn = include_once(__DIR__ . '/connection.php');
+    $conn = include(__DIR__ . '/connection.php');
     $id = $_SESSION['idCliente'];
     $idCliente = (int)$id;
-    $sql = "INSERT INTO carrinho (nomeProduto, preco, descricao, url, 'idCliente', idProduto) VALUES ('nome', '122', 'desc', 'url',$idCliente, 4)";
-    var_dump($sql);
+    extract($productInfo[0]);
+    $sql = "INSERT INTO carrinho (nomeProduto, preco, descricao, url, idCliente, idProduto) VALUES ('$nomeProduto', '$preco', '$descricao', '$url', $idCliente, $idProduto)";
+    $conn->query($sql);
+}
+
+function deleteCart($nomeProduto)
+{  
+    session_start();
+    $conn = include(__DIR__ . '/connection.php');
+    $sql = "DELETE FROM carrinho WHERE nomeProduto ='$nomeProduto'";
     $conn->query($sql);
 }

@@ -33,7 +33,7 @@ $html = "
         </div>
         <div class='w-100'></div>
     </div>
-    <form action='./includes/controller.php' method='post'>
+    <form action='./includes/controller.php?id={$id}' method='post'>
     <input name='addToCart' type='submit' class='btn btn-primary py-3 px-5 mr-2' value='Adicionar ao carrinho'>
     </form>
 </div>

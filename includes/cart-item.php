@@ -1,5 +1,6 @@
 <?php
 
+
 include_once(__DIR__ . '/crud.php');
 
 $registros = readCart();
@@ -28,9 +29,11 @@ foreach ($registros as $registro) {
     </td>
     <td>R$ {$registro['preco']}</td>
     <td>
-        <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+    <form action='./includes/controller.php?nome={$registro['nomeProduto']}' method='post'>
+        <button type='submit' name='deleteCartItem' class='close'>
             <span aria-hidden='true'><i class='fa fa-close'></i></span>
         </button>
+    </from>
     </td>
     </tr>";
 }
